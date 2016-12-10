@@ -17,8 +17,8 @@ for file in os.listdir(os.getcwd()):
 for file in os.listdir(os.getcwd()):
 	if file.endswith(".swf"):
 		command = "swfrender " + os.path.abspath(file) + " -X " + str(width) + " -o " + dir + "/" + os.path.splitext(file)[0] + ".png"
-		#os.system(command)
-		time.sleep(0.25)
+		os.system(command)
+		#time.sleep(0.25)
 
 		#recheck size
 		(columns,lines) = shutil.get_terminal_size((80, 20))
